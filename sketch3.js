@@ -9,7 +9,7 @@ var days = new Array(13);
 function setup() {
 
     // myFont = loadFont('assets/SourceHanSansHWSC-Regular.otf');
-    createCanvas(375, 624);
+    createCanvas(375 * 2, 624);
 
     gYear = 1994;
     gMonth = 3;
@@ -35,21 +35,21 @@ function draw() {
     background(200);
     fill('#ED225D');
     // textFont(myFont);
-    textSize(16);
+    textSize(24);
     textAlign(LEFT);
-    text(myString, 92, 176);
+    text(myString, 220, 176);
 
     calDate();
 
     textAlign(CENTER);
-    text(myYear + ' years', 170, 220);
-    text(myMonth + ' months', 170, 262);
-    text(myDay + ' days', 170, 302);
-    text(myHour + ' hours', 170, 342);
-    text(myMinute + ' minutes', 170, 382);
-    text(mySecond + ' seconds', 170, 422);
+    text(myYear + ' years', 170 * 2, 220);
+    text(myMonth + ' months', 170 * 2, 262);
+    text(myDay + ' days', 170 * 2, 302);
+    text(myHour + ' hours', 170 * 2, 342);
+    text(myMinute + ' minutes', 170 * 2, 382);
+    text(mySecond + ' seconds', 170 * 2, 422);
     
-    text('@gantea', 170, 610);    
+    text('@gantea', 170 * 2, 610);    
 }
 
 function calDate() {
