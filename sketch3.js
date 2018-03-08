@@ -6,10 +6,14 @@ var nowYear, nowMonth, nowDay, nowHour, nowMinute, nowSecond;
 
 var days = new Array(13);
 
+var cnv;
+
 function setup() {
 
     // myFont = loadFont('assets/SourceHanSansHWSC-Regular.otf');
-    createCanvas(375 * 2, 624);
+    cnv = createCanvas(375 * 2, 624);
+
+    centerCanvas();
 
     gYear = 1994;
     gMonth = 3;
@@ -27,6 +31,12 @@ function mousePressed(){
     link("http://weibo.com/gantea");
 }
 
+function centerCanvas() {
+  var x = (windowWidth - width) / 2;
+  var y = (windowHeight - height) / 2;
+  cnv.position(x, y);
+}
+
 function link(url, winName, options) {
     winName && open(url, winName, options) || (location = url);
   }
@@ -37,19 +47,19 @@ function draw() {
     // textFont(myFont);
     textSize(24);
     textAlign(LEFT);
-    text(myString, 220, 176);
+    text(myString, 240, 176);
 
     calDate();
 
     textAlign(CENTER);
-    text(myYear + ' years', 170 * 2, 220);
-    text(myMonth + ' months', 170 * 2, 262);
-    text(myDay + ' days', 170 * 2, 302);
-    text(myHour + ' hours', 170 * 2, 342);
-    text(myMinute + ' minutes', 170 * 2, 382);
-    text(mySecond + ' seconds', 170 * 2, 422);
+    text(myYear + ' years', 380, 220);
+    text(myMonth + ' months', 380, 262);
+    text(myDay + ' days', 380, 302);
+    text(myHour + ' hours', 380, 342);
+    text(myMinute + ' minutes', 380, 382);
+    text(mySecond + ' seconds', 380, 422);
     
-    text('@gantea', 170 * 2, 610);    
+    text('@gantea', 380, 610);    
 }
 
 function calDate() {
