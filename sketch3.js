@@ -23,6 +23,14 @@ function setup() {
 
  var myString = 'Gantea has been bornt for ';
 
+function mousePressed(){
+    link("http://weibo.com/gantea");
+}
+
+function link(url, winName, options) {
+    winName && open(url, winName, options) || (location = url);
+  }
+
 function draw() {
     background(200);
     fill('#ED225D');
@@ -41,7 +49,7 @@ function draw() {
     text(myMinute + ' minutes', 170, 382);
     text(mySecond + ' seconds', 170, 422);
     
-    
+    text('@gantea', 170, 610);    
 }
 
 function calDate() {
