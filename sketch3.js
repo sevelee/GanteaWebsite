@@ -25,7 +25,7 @@ function setup() {
     days[4] = days[6] = days[9] = days[11] = 30;
 }
 
- var myString = 'Gantea has been bornt for ';
+ var myString = 'Gantea has been born for ';
 
 function mousePressed(){
     link("http://weibo.com/gantea");
