@@ -8,7 +8,7 @@ var days = new Array(13);
 
 function setup() {
 
-    myFont = loadFont('assets/SourceHanSansHWSC-Regular.otf');
+    // myFont = loadFont('assets/SourceHanSansHWSC-Regular.otf');
     createCanvas(375, 624);
 
     gYear = 1994;
@@ -26,18 +26,20 @@ function setup() {
 function draw() {
     background(200);
     fill('#ED225D');
-    textFont(myFont);
-    textSize(32);
-    text(myString, 100, 100);
+    // textFont(myFont);
+    textSize(16);
+    textAlign(LEFT);
+    text(myString, 92, 176);
 
     calDate();
 
-    text(myYear + ' years', 100, 120);
-    text(myMonth + ' months', 100, 140);
-    text(myDay + ' days', 100, 160);
-    text(myHour + ' hours', 100, 180);
-    text(myMinute + ' minutes', 100, 200);
-    text(mySecond + ' seconds', 100, 220);
+    textAlign(CENTER);
+    text(myYear + ' years', 170, 220);
+    text(myMonth + ' months', 170, 262);
+    text(myDay + ' days', 170, 302);
+    text(myHour + ' hours', 170, 342);
+    text(myMinute + ' minutes', 170, 382);
+    text(mySecond + ' seconds', 170, 422);
     
     
 }
